@@ -1,0 +1,68 @@
+﻿@model IEnumerable<MvcPlantilla.Controllers.uspListarCargaAcademicaResult>
+
+@{
+    ViewBag.Title = "ListarCargaAcademica";
+}
+
+<h2>ListarCargaAcademica</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Docente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Carrera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignatura1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignatura2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignatura3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignatura4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Docente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carrera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignatura1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignatura2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignatura3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignatura4)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

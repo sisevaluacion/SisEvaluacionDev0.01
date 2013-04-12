@@ -1,0 +1,115 @@
+﻿@model MvcPlantilla.Models.ElaborarPRegunta
+
+@{
+    ViewBag.Title = "ElaborarPregunta";
+}
+
+<h2>ElaborarPregunta</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ElaborarPRegunta</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo)
+            @Html.ValidationMessageFor(model => model.Codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Curso)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Curso)
+            @Html.ValidationMessageFor(model => model.Curso)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pregunta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pregunta)
+            @Html.ValidationMessageFor(model => model.Pregunta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alternativa1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alternativa1)
+            @Html.ValidationMessageFor(model => model.Alternativa1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Correcta1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Correcta1)
+            @Html.ValidationMessageFor(model => model.Correcta1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alternativa2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alternativa2)
+            @Html.ValidationMessageFor(model => model.Alternativa2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Correcta2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Correcta2)
+            @Html.ValidationMessageFor(model => model.Correcta2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alternativa3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alternativa3)
+            @Html.ValidationMessageFor(model => model.Alternativa3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Correcta3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Correcta3)
+            @Html.ValidationMessageFor(model => model.Correcta3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alternativa4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alternativa4)
+            @Html.ValidationMessageFor(model => model.Alternativa4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Correcta4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Correcta4)
+            @Html.ValidationMessageFor(model => model.Correcta4)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,51 @@
+﻿@model MvcPlantilla.Models.RegistrarAsignatura
+
+@{
+    ViewBag.Title = "RegistrarAsignatura";
+}
+
+<h2>RegistrarAsignatura</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RegistrarAsignatura</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo)
+            @Html.ValidationMessageFor(model => model.Codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Asignatura)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Asignatura)
+            @Html.ValidationMessageFor(model => model.Asignatura)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Carrera)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Carrera)
+            @Html.ValidationMessageFor(model => model.Carrera)
+        </div>
+
+        <p>
+            <input type="submit" value="Agregar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

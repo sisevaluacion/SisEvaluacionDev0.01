@@ -1,0 +1,83 @@
+﻿@model MvcPlantilla.Models.AsignarCargaAcademica
+
+@{
+    ViewBag.Title = "6";
+}
+
+<h2>AsignarCargaAcademica</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AsignarCargaAcademica</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo)
+            @Html.ValidationMessageFor(model => model.Codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Docente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Docente)
+            @Html.ValidationMessageFor(model => model.Docente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Carrera)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Carrera)
+            @Html.ValidationMessageFor(model => model.Carrera)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Asignatura1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Asignatura1)
+            @Html.ValidationMessageFor(model => model.Asignatura1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Asignatura2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Asignatura2)
+            @Html.ValidationMessageFor(model => model.Asignatura2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Asignatura3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Asignatura3)
+            @Html.ValidationMessageFor(model => model.Asignatura3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Asignatura4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Asignatura4)
+            @Html.ValidationMessageFor(model => model.Asignatura4)
+        </div>
+
+        <p>
+            <input type="submit" value="Agregar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

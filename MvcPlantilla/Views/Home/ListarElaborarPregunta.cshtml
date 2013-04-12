@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MvcPlantilla.Controllers.uspListarElaborarPreguntaResult>
+
+@{
+    ViewBag.Title = "ListarElaborarPregunta";
+}
+
+<h2>ListarElaborarPregunta</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pregunta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alternativa1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correcta1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alternativa2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correcta2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alternativa3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correcta3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alternativa4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correcta4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pregunta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alternativa1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correcta1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alternativa2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correcta2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alternativa3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correcta3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alternativa4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correcta4)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
